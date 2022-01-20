@@ -1,0 +1,51 @@
+{
+  "name": "jest-prop-types",
+  "version": "1.0.1",
+  "description": "Makes Jest throw on React prop-type failures.",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "eslint": "eslint .",
+    "eslint:fix": "eslint --fix .",
+    "prettier": "prettier --check \"**/*.+(js|ts|json|md)\"",
+    "prettier:fix": "prettier --write \"**/*.+(js|ts|json|md)\"",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicasas/jest-prop-types.git"
+  },
+  "keywords": [
+    "jest",
+    "react",
+    "prop-types"
+  ],
+  "author": "Victor Casas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vicasas/jest-prop-types/issues"
+  },
+  "homepage": "https://github.com/vicasas/jest-prop-types#readme",
+  "devDependencies": {
+    "eslint": "^8.6.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^12.1.7",
+    "prettier": "2.5.1"
+  },
+  "lint-staged": {
+    "./*/**/*.{js,ts}": [
+      "prettier --write",
+      "eslint"
+    ],
+    "**/*.{json,md}": [
+      "prettier --write"
+    ]
+  }
+}
